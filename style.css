@@ -317,6 +317,100 @@ footer {
   .privacy-box { flex-direction: column; text-align: center; }
 }
 
+/* ── PRICING ─────────────────────────────── */
+.pricing-section {
+  border-top: 1px solid var(--border);
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.pricing-title {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 12px;
+}
+
+.pricing-sub {
+  color: var(--muted);
+  font-size: 1rem;
+  margin-bottom: 48px;
+}
+
+.pricing-grid {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pricing-card {
+  background: var(--surface);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  padding: 32px 28px;
+  width: 280px;
+  text-align: left;
+  position: relative;
+}
+
+.pricing-card-featured {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.pricing-plan {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.pricing-price {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.04em;
+  margin-bottom: 6px;
+}
+
+.pricing-price span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.pricing-note {
+  font-size: 0.8125rem;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.pricing-features {
+  margin-top: 0;
+}
+
+@media (max-width: 700px) {
+  .pricing-grid { flex-direction: column; align-items: center; }
+  .pricing-card { width: 100%; max-width: 320px; }
+}
+
 /* ── LEGAL PAGES ─────────────────────────── */
 .legal-page {
   max-width: 700px;
