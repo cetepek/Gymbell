@@ -210,7 +210,19 @@ nav {
 }
 
 .screenshot-right { max-width: 240px; }
-.screenshot-watch { max-width: 200px; }
+.screenshot-watch { max-width: 180px; }
+
+.watch-pair {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.watch-front {
+  margin-bottom: -16px;
+  filter: drop-shadow(0 20px 40px rgba(255,107,53,0.25));
+}
 
 .templates-section {
   border-top: 1px solid var(--border);
@@ -298,8 +310,9 @@ footer {
   .check-list li { padding-left: 0; }
   .check-list li::before { display: none; }
 
-  .screenshot-right,
-  .screenshot-watch { max-width: 200px; margin: 0 auto; }
+  .screenshot-right { max-width: 200px; margin: 0 auto; }
+  .watch-pair { justify-content: center; }
+  .screenshot-watch { max-width: 140px; }
 
   .privacy-box { flex-direction: column; text-align: center; }
 }
