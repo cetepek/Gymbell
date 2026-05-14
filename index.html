@@ -1,167 +1,517 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gymbell — Smart Workout Tracker</title>
-  <meta name="description" content="Track workouts, get AI coaching hints, and monitor muscle balance. iPhone + Apple Watch. 21-day free trial.">
-  <meta property="og:title" content="Gymbell — Smart Workout Tracker">
-  <meta property="og:description" content="AI-powered workout tracking for iPhone and Apple Watch. Your data stays on your device.">
-  <meta property="og:type" content="website">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Gymbell — Train smarter. Start free.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" />
+
+<link rel="stylesheet" href="styles.css" />
+
 </head>
 <body>
 
-  <!-- HERO -->
-  <header>
-    <nav>
-      <span class="logo">Gymbell</span>
-      <a href="https://apps.apple.com/app/id[APP_ID]" class="btn-nav">Download</a>
-    </nav>
-    <div class="hero-content">
-      <h1>Train smarter.<br>Start free.</h1>
-      <p class="tagline">AI-powered workout tracking for iPhone and Apple Watch. 21-day free trial — your data stays on your device.</p>
-      <a href="https://apps.apple.com/app/id[APP_ID]" class="btn-appstore">
-        <img src="assets/app-store-badge.svg" alt="Download on the App Store" width="160" height="54">
+<!-- ============================================ NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#">
+      <span class="brand-mark">G</span>
+      <span>Gymbell</span>
+    </a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#watch">Apple Watch</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#privacy">Privacy</a>
+    </div>
+    <a class="nav-cta" href="https://apps.apple.com/app/id[APP_ID]">
+      Download
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</nav>
+
+<!-- ============================================ HERO -->
+<header class="hero">
+  <div class="shell hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">v1.0 &nbsp; · &nbsp; iPhone &amp; Apple Watch</div>
+      <h1>Train<br/>smarter.<br/><em>Start free.</em></h1>
+      <p class="lede">An AI-coached workout tracker that learns your patterns, suggests the next session, and keeps your training balanced. 21 days free — every byte stays on your device.</p>
+
+      <div class="hero-actions">
+        <a class="btn-primary" href="https://apps.apple.com/app/id[APP_ID]">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.02-2.13 1.74-3.16 1.82-3.21-.99-1.45-2.54-1.65-3.09-1.67-1.31-.13-2.57.77-3.24.77-.69 0-1.71-.75-2.82-.73-1.45.02-2.79.84-3.54 2.14-1.51 2.62-.39 6.5 1.08 8.62.72 1.04 1.58 2.21 2.7 2.17 1.09-.04 1.5-.7 2.81-.7 1.31 0 1.68.7 2.83.68 1.17-.02 1.91-1.06 2.62-2.11.83-1.21 1.17-2.38 1.19-2.44-.03-.01-2.28-.87-2.36-3.52zM14.94 5.73c.6-.74 1.01-1.75.9-2.77-.87.04-1.94.59-2.57 1.32-.56.65-1.05 1.7-.92 2.69.98.08 1.97-.49 2.59-1.24z"/></svg>
+          Download on App Store
+        </a>
+        <a class="btn-ghost" href="#features">
+          See how it works
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="hero-trust">
+        <div class="trust-item">
+          <span class="num">21</span>
+          <span class="lbl">Day free trial</span>
+        </div>
+        <div class="trust-item">
+          <span class="num">0</span>
+          <span class="lbl">Cloud · No account</span>
+        </div>
+        <div class="trust-item">
+          <span class="num">2</span>
+          <span class="lbl">Devices · iPhone &amp; Watch</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-phone-wrap">
+      <div class="phone phone--lg">
+        <div class="phone-screen">
+          <div class="phone-island"></div>
+          <img class="slot-img" loading="lazy" src="https://cetepek.github.io/Gymbell/assets/IMG_8225.PNG" alt="Drop IMG_8225 — active session with coach hints" />
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================ MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Smart <em>NEXT&nbsp;UP</em></span><span class="dot"></span>
+    <span>Progressive overload hints</span><span class="dot"></span>
+    <span><em>Body</em> Balance</span><span class="dot"></span>
+    <span>Estimated 1RM trends</span><span class="dot"></span>
+    <span>AI program <em>generator</em></span><span class="dot"></span>
+    <span>Apple Watch companion</span><span class="dot"></span>
+    <span><em>Local-only</em> SwiftData</span><span class="dot"></span>
+    <span>Strong CSV import</span><span class="dot"></span>
+    <!-- duplicate for seamless loop -->
+    <span>Smart <em>NEXT&nbsp;UP</em></span><span class="dot"></span>
+    <span>Progressive overload hints</span><span class="dot"></span>
+    <span><em>Body</em> Balance</span><span class="dot"></span>
+    <span>Estimated 1RM trends</span><span class="dot"></span>
+    <span>AI program <em>generator</em></span><span class="dot"></span>
+    <span>Apple Watch companion</span><span class="dot"></span>
+    <span><em>Local-only</em> SwiftData</span><span class="dot"></span>
+    <span>Strong CSV import</span><span class="dot"></span>
+  </div>
+</div>
+
+<!-- ============================================ FEATURES -->
+<section class="section" id="features">
+  <div class="shell">
+    <div class="section-head">
+      <div class="meta">
+        <span class="num">§ 01 — 04</span>
+        <span>Features</span>
+      </div>
+      <h2>Four moves that change<br/>how you <em>lift</em>.</h2>
+    </div>
+
+    <div class="features">
+
+      <!-- FEATURE 01 -->
+      <article class="feature">
+        <div class="feature-copy">
+          <span class="tag-num">01 / NEXT UP</span>
+          <h3>Knows what you<br/>should <em>train next</em>.</h3>
+          <p>Gymbell quietly studies your training patterns — frequency, fatigue, time since last hit — and surfaces tomorrow's session before you ask. No spreadsheets, no scheduling.</p>
+          <ul class="feature-bullets">
+            <li>Suggested weights based on your recent sets</li>
+            <li>One-tap to start; reorder anything mid-session</li>
+            <li>Pattern adapts as your routine drifts</li>
+          </ul>
+        </div>
+        <div class="feature-visual">
+          <div class="phone">
+            <div class="phone-screen">
+              <div class="phone-island"></div>
+              <img class="slot-img" loading="lazy" src="https://cetepek.github.io/Gymbell/assets/IMG_8226.PNG" alt="Drop start-workout / next-up screen" />
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- FEATURE 02 -->
+      <article class="feature">
+        <div class="feature-copy">
+          <span class="tag-num">02 / IN THE ZONE</span>
+          <h3>Coaches you,<br/>set by <em>set</em>.</h3>
+          <p>Stepper controls for reps and weight, progressive overload hints when the bar's ready to move, and an auto rest timer that knows when you're back. Eyes on the lift, not the phone.</p>
+          <ul class="feature-bullets">
+            <li>Real-time hints — push +2.5 kg, hold reps</li>
+            <li>Auto rest timer with smart break detection</li>
+            <li>Big stepper buttons, gym-glove friendly</li>
+          </ul>
+        </div>
+        <div class="feature-visual">
+          <div class="phone">
+            <div class="phone-screen">
+              <div class="phone-island"></div>
+              <img class="slot-img" loading="lazy" src="https://cetepek.github.io/Gymbell/assets/IMG_8225.PNG" alt="Drop active-session screen" />
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- FEATURE 03 -->
+      <article class="feature">
+        <div class="feature-copy">
+          <span class="tag-num">03 / BODY BALANCE</span>
+          <h3>Train symmetrically.<br/>Progress <em>faster</em>.</h3>
+          <p>A 30-day muscle-group readout reveals what you've been skipping — every back day you skipped, every neglected hamstring. Even pull, even push, even legs.</p>
+          <ul class="feature-bullets">
+            <li>Volume per group, rolling 30 days</li>
+            <li>Flags imbalances before injuries find them</li>
+            <li>Filter by lift family or movement plane</li>
+          </ul>
+        </div>
+        <div class="feature-visual">
+          <div class="phone">
+            <div class="phone-screen">
+              <div class="phone-island"></div>
+              <img class="slot-img" loading="lazy" src="https://cetepek.github.io/Gymbell/assets/01-progress.png" alt="Drop body balance screen" />
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- FEATURE 04 -->
+      <article class="feature">
+        <div class="feature-copy">
+          <span class="tag-num">04 / STRENGTH CHARTS</span>
+          <h3>Watch your <em>1RM</em><br/>climb, week over week.</h3>
+          <p>Every lift gets an estimated one-rep-max trend line. Plateaus become visible. PRs become inevitable. Tap any session for the sets behind the number.</p>
+          <ul class="feature-bullets">
+            <li>Per-exercise 1RM estimation curves</li>
+            <li>Personal records tagged automatically</li>
+            <li>Compare two lifts side-by-side</li>
+          </ul>
+        </div>
+        <div class="feature-visual">
+          <div class="phone">
+            <div class="phone-screen">
+              <div class="phone-island"></div>
+              <img class="slot-img" loading="lazy" src="https://cetepek.github.io/Gymbell/assets/IMG_8227.PNG" alt="Drop strength chart screen" />
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ TEMPLATES -->
+<section class="section">
+  <div class="shell">
+    <div class="section-head">
+      <div class="meta">
+        <span class="num">§ 05</span>
+        <span>Templates &amp; Programs</span>
+      </div>
+      <h2>Your templates,<br/>your <em>way</em>.</h2>
+    </div>
+
+    <div class="templates-grid">
+      <div class="templates-copy">
+        <h3>Build it by hand —<br/>or let the model<br/>draft a <em>full program</em>.</h3>
+        <p>Hand-craft a template for one workout, or describe your goal and let Gymbell generate a multi-week program tuned to your current lifts, schedule, and experience. Adjust anything; the program adapts.</p>
+
+        <div class="template-chips">
+          <span class="chip accent">Hypertrophy</span>
+          <span class="chip">Fat loss</span>
+          <span class="chip">Strength</span>
+          <span class="chip">Endurance</span>
+          <span class="chip">Push / Pull / Legs</span>
+          <span class="chip">Upper / Lower</span>
+          <span class="chip">5×5</span>
+          <span class="chip">Custom</span>
+        </div>
+
+        <ul class="feature-bullets" style="margin-top:32px">
+          <li>Programs adapt to your current 1RM and recovery</li>
+          <li>Weekly schedule with day-of-week assignments</li>
+          <li>Import existing data from Strong CSV in seconds</li>
+        </ul>
+      </div>
+
+      <div class="feature-visual">
+        <div class="phone phone--lg">
+          <div class="phone-screen">
+            <div class="phone-island"></div>
+            <img class="slot-img" loading="lazy" src="https://cetepek.github.io/Gymbell/assets/IMG_8224.PNG" alt="Drop templates / programs screen" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ WATCH -->
+<section class="section watch-section" id="watch">
+  <div class="shell">
+    <div class="section-head">
+      <div class="meta">
+        <span class="num">§ 06</span>
+        <span>Apple Watch Companion</span>
+      </div>
+      <h2>Leave the phone in<br/>the locker. <em>Lift.</em></h2>
+    </div>
+
+    <div class="watch-grid">
+      <div class="watch-visual">
+        <div class="watch">
+          <div class="watch-screen">
+            <img class="slot-img" loading="lazy" src="https://cetepek.github.io/Gymbell/assets/watch-choose-plan.png" alt="Watch — plan select" />
+          </div>
+        </div>
+        <div class="watch">
+          <div class="watch-screen">
+            <img class="slot-img" loading="lazy" src="https://cetepek.github.io/Gymbell/assets/watch-active-set.png" alt="Watch — active set" />
+          </div>
+        </div>
+      </div>
+
+      <div class="watch-copy">
+        <h3>Log sets with the<br/><em>Digital Crown</em>.</h3>
+        <p>Full companion mode syncs in real time with your iPhone. Track rest, adjust reps with a flick, and breeze through a session without ever pulling your phone out of your bag.</p>
+
+        <div class="watch-features">
+          <div class="watch-feature">
+            <span class="lbl">Sync</span>
+            <span class="val">Real-time, bi-directional</span>
+          </div>
+          <div class="watch-feature">
+            <span class="lbl">Heart rate</span>
+            <span class="val">Live during every set</span>
+          </div>
+          <div class="watch-feature">
+            <span class="lbl">Rest</span>
+            <span class="val">Auto-advances on movement</span>
+          </div>
+          <div class="watch-feature">
+            <span class="lbl">Summary</span>
+            <span class="val">On-wrist post-session recap</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ PRICING -->
+<section class="section" id="pricing">
+  <div class="shell">
+    <div class="section-head">
+      <div class="meta">
+        <span class="num">§ 07</span>
+        <span>Pricing</span>
+      </div>
+      <h2>Try everything,<br/>free for <em>21 days</em>.</h2>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-head">
+          <span class="price-name">Monthly</span>
+          <span class="price-tag">$2.99<span class="unit">/ month</span></span>
+          <span class="price-sub">After your 21-day free trial.</span>
+        </div>
+        <ul class="price-features">
+          <li>Every feature, no tiers</li>
+          <li>Cancel anytime in Settings</li>
+          <li>Family Sharing supported</li>
+          <li>Future updates included</li>
+        </ul>
+        <a class="price-cta" href="https://apps.apple.com/app/id[APP_ID]">
+          Start free trial
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="price-card featured">
+        <span class="price-badge">Best value</span>
+        <div class="price-head">
+          <span class="price-name">Lifetime</span>
+          <span class="price-tag">$39.99<span class="unit">once</span></span>
+          <span class="price-sub">Pay once. Own forever.</span>
+        </div>
+        <ul class="price-features">
+          <li>Every feature, no tiers</li>
+          <li>All future updates — forever</li>
+          <li>Family Sharing supported</li>
+          <li>No subscription, ever</li>
+        </ul>
+        <a class="price-cta" href="https://apps.apple.com/app/id[APP_ID]">
+          Buy lifetime
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ PRIVACY -->
+<section class="section privacy" id="privacy">
+  <div class="shell">
+    <div class="lock">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="4" y="11" width="16" height="10" rx="2"/>
+        <path d="M8 11V8a4 4 0 0 1 8 0v3"/>
+      </svg>
+    </div>
+    <h3>Your data <em>stays</em><br/>on your device.</h3>
+    <p>Gymbell stores everything locally with SwiftData — no account, no cloud, no harvesting. When you use AI features, your own API key talks to the AI provider directly. We don't have servers because we don't need them.</p>
+
+    <div class="privacy-meta">
+      <div class="item"><span class="v">0</span><span class="l">Accounts</span></div>
+      <div class="item"><span class="v">0</span><span class="l">Trackers</span></div>
+      <div class="item"><span class="v">0</span><span class="l">Servers</span></div>
+      <div class="item"><span class="v">100%</span><span class="l">On-device</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ FAQ / CONTACT -->
+<section class="section faq-section" id="contact">
+  <div class="shell">
+    <div class="section-head">
+      <div class="meta">
+        <span class="num">§ 08</span>
+        <span>Questions &amp; Contact</span>
+      </div>
+      <h2>Anything else<br/>we should <em>answer</em>?</h2>
+    </div>
+
+    <div class="faq-grid">
+      <details class="faq" open>
+        <summary>
+          <span class="faq-q">What happens after the 21-day trial?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-a">Nothing surprising. Your trial simply ends and you choose Monthly ($2.99) or Lifetime ($39.99) from inside the app. No auto-charge surprises — the App Store handles billing transparently.</div>
+      </details>
+      <details class="faq">
+        <summary>
+          <span class="faq-q">Which AI providers does Gymbell support?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-a">You bring your own API key — currently OpenAI, Anthropic, and any OpenAI-compatible endpoint. Your key is stored locally in iOS Keychain and used only to call the provider directly.</div>
+      </details>
+      <details class="faq">
+        <summary>
+          <span class="faq-q">Can I import data from another app?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-a">Yes — Strong CSV imports are supported out of the box. Drop the file from Files or share it from Strong; Gymbell maps exercises automatically.</div>
+      </details>
+      <details class="faq">
+        <summary>
+          <span class="faq-q">Do I need the Apple Watch app to use Gymbell?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-a">No. Gymbell works fully on iPhone alone. The Watch app is a free companion that mirrors the active session for hands-off logging.</div>
+      </details>
+      <details class="faq">
+        <summary>
+          <span class="faq-q">How do I get a refund?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-a">Refunds are handled through Apple — open the App Store, tap your profile → Purchase History, then Report a Problem. We're happy to vouch for any genuine issue; just email us first and we'll help.</div>
+      </details>
+      <details class="faq">
+        <summary>
+          <span class="faq-q">I found a bug or have a feature request.</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-a">Please email <a href="mailto:gymbell2026@gmail.com">gymbell2026@gmail.com</a> with a short description (and a screen recording if you can). Gymbell is built by one person and every message is read.</div>
+      </details>
+    </div>
+
+    <div class="contact-card">
+      <div>
+        <span class="mono">Direct line</span>
+        <div class="contact-email"><a href="mailto:gymbell2026@gmail.com">gymbell2026@gmail.com</a></div>
+        <p class="contact-sub">Support, press, bug reports, business — same inbox, real human, usually within 48 hours.</p>
+      </div>
+      <a class="btn-ghost" href="mailto:gymbell2026@gmail.com">
+        Send a message
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
     </div>
-  </header>
+  </div>
+</section>
 
-  <!-- HERO SCREENSHOT -->
-  <section class="hero-screenshot">
-    <div class="container">
-      <img src="assets/IMG_8225.PNG" alt="Gymbell active workout session showing coach hints and set controls" class="screenshot-hero">
+<!-- ============================================ FINAL CTA -->
+<section class="final-cta">
+  <div class="shell">
+    <h2>Pick up the<br/><em>bar</em>.</h2>
+    <p>21 days free. No credit card tricks, no data leaving your phone. Just better sessions, starting today.</p>
+    <a class="btn-primary" href="https://apps.apple.com/app/id[APP_ID]">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.02-2.13 1.74-3.16 1.82-3.21-.99-1.45-2.54-1.65-3.09-1.67-1.31-.13-2.57.77-3.24.77-.69 0-1.71-.75-2.82-.73-1.45.02-2.79.84-3.54 2.14-1.51 2.62-.39 6.5 1.08 8.62.72 1.04 1.58 2.21 2.7 2.17 1.09-.04 1.5-.7 2.81-.7 1.31 0 1.68.7 2.83.68 1.17-.02 1.91-1.06 2.62-2.11.83-1.21 1.17-2.38 1.19-2.44-.03-.01-2.28-.87-2.36-3.52zM14.94 5.73c.6-.74 1.01-1.75.9-2.77-.87.04-1.94.59-2.57 1.32-.56.65-1.05 1.7-.92 2.69.98.08 1.97-.49 2.59-1.24z"/></svg>
+      Download on App Store
+    </a>
+  </div>
+</section>
+
+<!-- ============================================ FOOTER -->
+<footer>
+  <div class="foot-top">
+    <div class="foot-mark">Gymb<em>ell</em>.</div>
+    <div class="foot-tag">AI-coached strength<br/>training for iPhone<br/>&amp; Apple Watch</div>
+  </div>
+
+  <div class="foot-cols">
+    <div class="foot-col">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#watch">Apple Watch</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="https://apps.apple.com/app/id[APP_ID]">App Store</a></li>
+      </ul>
     </div>
-  </section>
-
-  <!-- FEATURE STRIP -->
-  <section class="features">
-    <div class="container">
-      <div class="feature-grid">
-
-        <div class="feature">
-          <div class="feature-icon">📈</div>
-          <h2>Smart NEXT UP</h2>
-          <p>Gymbell learns your training patterns and tells you what to train next — no manual scheduling required.</p>
-          <img src="assets/IMG_8226.PNG" alt="Start workout screen showing next weight suggestions" class="screenshot-sm">
-        </div>
-
-        <div class="feature">
-          <div class="feature-icon">💪</div>
-          <h2>Stay in the zone</h2>
-          <p>Stepper controls, progressive overload hints, and an auto rest timer keep your sessions focused.</p>
-          <img src="assets/IMG_8225.PNG" alt="Active workout session with coach hints" class="screenshot-sm">
-        </div>
-
-        <div class="feature">
-          <div class="feature-icon">🎯</div>
-          <h2>Body Balance</h2>
-          <p>See which muscle groups you're neglecting over the last 30 days. Train symmetrically, progress faster.</p>
-          <img src="assets/01-progress.png" alt="Body balance muscle group bars" class="screenshot-sm">
-        </div>
-
-        <div class="feature">
-          <div class="feature-icon">📊</div>
-          <h2>Strength charts</h2>
-          <p>Track your estimated 1RM trend over time for every exercise. See exactly how far you've come.</p>
-          <img src="assets/IMG_8227.PNG" alt="Exercise library" class="screenshot-sm">
-        </div>
-
-      </div>
+    <div class="foot-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#contact">FAQ</a></li>
+        <li><a href="mailto:gymbell2026@gmail.com">Email support</a></li>
+        <li><a href="mailto:gymbell2026@gmail.com?subject=Bug%20report">Report a bug</a></li>
+        <li><a href="mailto:gymbell2026@gmail.com?subject=Feature%20request">Feature request</a></li>
+      </ul>
     </div>
-  </section>
-
-  <!-- TEMPLATES SECTION -->
-  <section class="templates-section">
-    <div class="container side-by-side">
-      <div class="text-block">
-        <h2>Your templates, your way</h2>
-        <p>Build custom workout templates manually or let the AI generate a full multi-week program tailored to your goal, schedule, and experience level.</p>
-        <ul class="check-list">
-          <li>Muscle building, fat loss, strength, endurance</li>
-          <li>AI programs adapt to your current lifts</li>
-          <li>Weekly schedule with day assignments</li>
-          <li>Import from Strong CSV</li>
-        </ul>
-      </div>
-      <img src="assets/IMG_8224.PNG" alt="Templates tab showing workout templates with AI suggestions" class="screenshot-right">
+    <div class="foot-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="https://cetepek.github.io/Gymbell/privacy.html">Privacy Policy</a></li>
+        <li><a href="https://cetepek.github.io/Gymbell/terms.html">Terms of Service</a></li>
+        <li><a href="https://cetepek.github.io/Gymbell/privacy.html#data">Data handling</a></li>
+        <li><a href="https://cetepek.github.io/Gymbell/terms.html#subscription">Subscription terms</a></li>
+      </ul>
     </div>
-  </section>
-
-  <!-- WATCH SECTION -->
-  <section class="watch-section">
-    <div class="container side-by-side reverse">
-      <div class="watch-pair">
-        <img src="assets/watch-choose-plan.png" alt="Gymbell on Apple Watch showing plan selection" class="screenshot-watch">
-        <img src="assets/watch-active-set.png" alt="Gymbell on Apple Watch showing active set" class="screenshot-watch watch-front">
-      </div>
-      <div class="text-block">
-        <h2>Apple Watch companion</h2>
-        <p>Log sets, adjust reps with the Digital Crown, and track rest time right from your wrist — without touching your phone.</p>
-        <ul class="check-list">
-          <li>Full companion mode — syncs in real time</li>
-          <li>Auto-advance to next set after rest</li>
-          <li>Heart rate during workout</li>
-          <li>Session summary on Watch</li>
-        </ul>
-      </div>
+    <div class="foot-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:gymbell2026@gmail.com">gymbell2026@gmail.com</a></li>
+        <li><a href="mailto:gymbell2026@gmail.com?subject=Press%20inquiry">Press inquiries</a></li>
+        <li><a href="mailto:gymbell2026@gmail.com?subject=Partnership">Partnerships</a></li>
+      </ul>
     </div>
-  </section>
+  </div>
 
-  <!-- PRICING SECTION -->
-  <section class="pricing-section">
-    <div class="container">
-      <h2 class="pricing-title">Simple pricing</h2>
-      <p class="pricing-sub">Try everything free for 21 days. No credit card tricks.</p>
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <div class="pricing-plan">Monthly</div>
-          <div class="pricing-price">$2.99<span>/month</span></div>
-          <div class="pricing-note">After 21-day free trial</div>
-          <ul class="check-list pricing-features">
-            <li>All features included</li>
-            <li>Cancel anytime</li>
-            <li>Family Sharing</li>
-          </ul>
-        </div>
-        <div class="pricing-card pricing-card-featured">
-          <div class="pricing-badge">Best Value</div>
-          <div class="pricing-plan">Lifetime</div>
-          <div class="pricing-price">$39.99<span> once</span></div>
-          <div class="pricing-note">Pay once, own forever</div>
-          <ul class="check-list pricing-features">
-            <li>All features included</li>
-            <li>All future updates</li>
-            <li>Family Sharing</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRIVACY SECTION -->
-  <section class="privacy-section">
-    <div class="container privacy-box">
-      <div class="privacy-icon">🔒</div>
-      <div>
-        <h2>Your data stays on your device</h2>
-        <p>Gymbell stores everything locally using SwiftData. No account required, no cloud sync, no data harvesting. When you use AI features, your API key goes directly to the AI provider — never through Gymbell servers (we have none).</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <p class="footer-logo">Gymbell</p>
-      <p class="footer-sub">© 2026 Gymbell. Made with ❤️ for lifters.</p>
-      <nav class="footer-nav">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
-        <a href="mailto:cetepek@hotmail.com">Support</a>
-      </nav>
-    </div>
-  </footer>
+  <div class="foot-bot">
+    <span>© 2026 Gymbell · Made independently for lifters</span>
+    <span>Apple, the Apple logo, iPhone &amp; Apple Watch are trademarks of Apple Inc.</span>
+  </div>
+</footer>
 
 </body>
 </html>
