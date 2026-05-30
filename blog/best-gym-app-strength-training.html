@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What's the Best Gym App for Strength Training? — Gymbell Blog</title>
+  <meta name="description" content="After 10 years of lifting and trying every tracker on the market, I built my own. An honest comparison of Gymbell, Strong, and Hevy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* Variable remapping for blog post styles */
+    .blog-host {
+      --color-text-primary:         #ffffff;
+      --color-text-secondary:       #9999b8;
+      --color-background-primary:   #242438;
+      --color-background-secondary: #1e1e30;
+      --color-border-tertiary:      rgba(255, 255, 255, 0.10);
+      --border-radius-md:           8px;
+      --border-radius-lg:           14px;
+    }
+
+    .article-back {
+      display: inline-block;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 32px;
+      transition: opacity 0.15s;
+    }
+    .article-back:hover { opacity: 0.75; }
+
+    /* Blog article */
+    .blog {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      color: var(--color-text-primary);
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    .blog-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .blog h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(26px, 5vw, 38px);
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0 0 1.25rem;
+      color: var(--color-text-primary);
+    }
+
+    .blog h1 em {
+      font-style: italic;
+      color: var(--color-text-secondary);
+    }
+
+    .blog-meta {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--color-border-tertiary);
+      flex-wrap: wrap;
+    }
+
+    .blog-meta .author {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #1D9E75;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 600;
+      color: #04342C;
+      flex-shrink: 0;
+    }
+
+    .blog h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 22px;
+      font-weight: 700;
+      margin: 2.5rem 0 0.75rem;
+      color: var(--color-text-primary);
+      line-height: 1.25;
+    }
+
+    .blog p {
+      margin: 0 0 1.25rem;
+      color: var(--color-text-primary);
+    }
+
+    .pullquote {
+      border-left: 3px solid var(--accent);
+      padding: 0.75rem 1.25rem;
+      margin: 2rem 0;
+      background: var(--color-background-secondary);
+      border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
+    }
+
+    .pullquote p {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 18px;
+      font-style: italic;
+      margin: 0;
+      color: var(--color-text-primary);
+    }
+
+    .pullquote cite {
+      display: block;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-style: normal;
+      font-size: 12px;
+      color: var(--color-text-secondary);
+      margin-top: 0.5rem;
+    }
+
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .app-card {
+      background: var(--color-background-primary);
+      border: 1px solid var(--color-border-tertiary);
+      border-radius: var(--border-radius-lg);
+      padding: 1rem 1.25rem;
+    }
+
+    .app-card.featured {
+      border-color: #1D9E75;
+      box-shadow: 0 0 0 1px #1D9E75;
+    }
+
+    .app-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: var(--border-radius-md);
+      margin-bottom: 8px;
+      background: rgba(29, 158, 117, 0.18);
+      color: #4ecfa0;
+    }
+
+    .app-name {
+      font-weight: 600;
+      font-size: 15px;
+      margin: 0 0 4px;
+      color: var(--color-text-primary);
+    }
+
+    .app-sub {
+      font-size: 12px;
+      color: var(--color-text-secondary);
+      margin: 0 0 12px;
+    }
+
+    .feature-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      padding: 5px 0;
+      border-bottom: 1px solid var(--color-border-tertiary);
+      color: var(--color-text-secondary);
+    }
+
+    .feature-row:last-child { border-bottom: none; }
+
+    .feat-yes     { color: #36c56a; font-size: 15px; }
+    .feat-partial { color: #FF6B35; font-size: 15px; }
+    .feat-no      { color: #5a4f6e; font-size: 15px; }
+
+    .verdict-box {
+      background: var(--color-background-primary);
+      border-radius: var(--border-radius-lg);
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+      border: 1px solid var(--color-border-tertiary);
+    }
+
+    .verdict-box h3 {
+      margin: 0 0 0.5rem;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-text-secondary);
+    }
+
+    .verdict-box p { margin: 0; font-size: 15px; }
+
+    .pro-con {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 1.5rem 0;
+    }
+
+    .pc-col {
+      background: var(--color-background-primary);
+      border: 1px solid var(--color-border-tertiary);
+      border-radius: var(--border-radius-lg);
+      padding: 1rem 1.25rem;
+    }
+
+    .pc-col h4 {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin: 0 0 10px;
+      color: var(--color-text-secondary);
+    }
+
+    .pc-item {
+      display: flex;
+      gap: 8px;
+      font-size: 13px;
+      margin-bottom: 8px;
+      color: var(--color-text-primary);
+      align-items: flex-start;
+    }
+
+    .pc-dot-green { color: #36c56a; flex-shrink: 0; }
+    .pc-dot-amber { color: #FF6B35; flex-shrink: 0; }
+
+    .cta-block {
+      background: var(--color-background-primary);
+      border-radius: var(--border-radius-lg);
+      padding: 1.5rem 2rem;
+      margin: 2.5rem 0 0;
+      text-align: center;
+      border: 1px solid var(--color-border-tertiary);
+    }
+
+    .cta-block p {
+      margin: 0 0 1rem;
+      font-size: 15px;
+      color: var(--color-text-secondary);
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #ffffff;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 24px;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+
+    .cta-btn:hover { background: var(--accent-dim); }
+
+    .footnote {
+      font-size: 12px;
+      color: var(--color-text-secondary);
+      font-style: italic;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--color-border-tertiary);
+    }
+
+    @media (max-width: 600px) {
+      .comparison-grid,
+      .pro-con { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a class="logo" href="../index.html">Gymbell</a>
+      <a href="https://apps.apple.com/fi/app/gymbell/id6769465638?l=fi" class="btn-nav">Download</a>
+    </nav>
+  </header>
+
+  <main class="blog-host">
+    <article class="blog">
+      <a class="article-back" href="../blog.html">← Blog</a>
+
+      <p class="blog-label">Strength training · App review</p>
+      <h1>What's the Best Gym App<br>for <em>Strength Training?</em></h1>
+
+      <div class="blog-meta">
+        <div class="author">
+          <div class="avatar">T</div>
+          <span>Written by the developer of Gymbell · 10 years lifting</span>
+        </div>
+        <span>·</span>
+        <span>May 2026</span>
+      </div>
+
+      <p>I've tried most of the gym apps out there. Strong, Hevy, a dozen others you've never heard of. And after years of using them, I stopped making progress — not because I wasn't working hard enough, but because none of the apps were actually helping me train smarter.</p>
+
+      <p>So I built my own. This post is the honest take I wished existed when I was shopping for an app: what the real differences are, who each option suits, and the one thing almost every review gets completely wrong.</p>
+
+      <h2>The thing most reviews miss</h2>
+
+      <p>Every "best gym app" list talks about features. Exercise library size. UI polish. Integration with Apple Health. That stuff matters, but it's not why you stop making progress.</p>
+
+      <div class="pullquote">
+        <p>"A gym app should be easy to use — and it should know what you want."</p>
+        <cite>The two things that actually determine whether you keep using it</cite>
+      </div>
+
+      <p>Friction kills consistency. If logging a set takes too many taps, you stop logging mid-workout. And if the app treats you like a blank slate every session — never learning your patterns, never anticipating your next move — you're left doing all the thinking yourself. That's not a training partner. That's a spreadsheet with a nicer font.</p>
+
+      <h2>How the big three compare</h2>
+
+      <p>Here's an honest side-by-side of Strong, Hevy, and Gymbell across the things that actually matter for strength training progress:</p>
+
+      <div class="comparison-grid">
+        <div class="app-card">
+          <p class="app-name">Strong</p>
+          <p class="app-sub">The veteran logger</p>
+          <div class="feature-row"><span class="feat-yes">✓</span> Clean logging UX</div>
+          <div class="feature-row"><span class="feat-yes">✓</span> Large exercise library</div>
+          <div class="feature-row"><span class="feat-no">✗</span> Predictive progression</div>
+          <div class="feature-row"><span class="feat-no">✗</span> AI coaching</div>
+          <div class="feature-row"><span class="feat-no">✗</span> Next workout suggestion</div>
+          <div class="feature-row"><span class="feat-no">✗</span> iCloud sync</div>
+        </div>
+        <div class="app-card">
+          <p class="app-name">Hevy</p>
+          <p class="app-sub">Social + modern</p>
+          <div class="feature-row"><span class="feat-yes">✓</span> Clean logging UX</div>
+          <div class="feature-row"><span class="feat-yes">✓</span> Social features</div>
+          <div class="feature-row"><span class="feat-partial">~</span> Some progression hints</div>
+          <div class="feature-row"><span class="feat-partial">~</span> Some AI features</div>
+          <div class="feature-row"><span class="feat-partial">~</span> Basic next session</div>
+          <div class="feature-row"><span class="feat-yes">✓</span> Cloud sync</div>
+        </div>
+        <div class="app-card featured">
+          <span class="app-badge">Editor's pick</span>
+          <p class="app-name">Gymbell</p>
+          <p class="app-sub">Built for progress</p>
+          <div class="feature-row"><span class="feat-yes">✓</span> Clean logging UX</div>
+          <div class="feature-row"><span class="feat-yes">✓</span> Predictive progression</div>
+          <div class="feature-row"><span class="feat-yes">✓</span> AI coaching (voice)</div>
+          <div class="feature-row"><span class="feat-yes">✓</span> Next workout suggestion</div>
+          <div class="feature-row"><span class="feat-yes">✓</span> Body balance tracking</div>
+          <div class="feature-row"><span class="feat-yes">✓</span> iCloud sync + local data</div>
+        </div>
+      </div>
+
+      <h2>The progression engine — and why it changed my training</h2>
+
+      <p>The feature that made the biggest difference for me wasn't anything flashy. It's called Next Up, and it's the first thing you see when you open a session.</p>
+
+      <p>Based on your actual history — your specific patterns, your recent sets, how your performance has been trending — Gymbell predicts the weight and reps for your next set. Not based on generic progressive overload rules. Based on you.</p>
+
+      <p>Here's what surprised me about how this works in practice: it's psychological as much as it's analytical. When the app says "try 82.5 kg for 6 reps," you don't want to fail. You at least try. That small act of having a target in front of you, a target that feels earned rather than arbitrary, is what closes the gap between showing up and actually progressing.</p>
+
+      <div class="pullquote">
+        <p>"I made more progress in 6 months using Gymbell than in the previous 2 years combined."</p>
+        <cite>Personal experience — 10 years of lifting as context</cite>
+      </div>
+
+      <p>Strong has nothing like this. Hevy has moved in this direction, which is worth acknowledging — but the implementation is more basic, and the combination with a conversational AI layer makes the difference in day-to-day use.</p>
+
+      <h2>AI coaching — and how Gymbell approaches it differently</h2>
+
+      <p>AI features are showing up in more gym apps now, and that's genuinely good for lifters. Gymbell uses Apple Intelligence to let you talk to the app during or after a workout — ask it to add an exercise, generate a training plan, or analyse whether your current program is balanced.</p>
+
+      <p>What makes Gymbell's approach distinct isn't that it has AI — it's how the data is handled. You bring your own API key (Apple Intelligence, Claude, OpenAI, Gemini, or any compatible endpoint), and your key talks directly to the provider. Gymbell doesn't have servers. Your training data is stored locally on your device and synced to your own iCloud — it never passes through anyone else's infrastructure. That's a meaningfully different privacy position from apps that treat your training history as their asset.</p>
+
+      <h2>Who is Gymbell actually for?</h2>
+
+      <p>Honestly? Most gym-goers. If you're training with weights and want to stop guessing whether you're progressing, the predictive engine is the best tool I've found — and I spent years looking before building it myself.</p>
+
+      <div class="pro-con">
+        <div class="pc-col">
+          <h4>Great fit if you...</h4>
+          <div class="pc-item"><span class="pc-dot-green">✓</span> Train with weights (barbell, dumbbell, machine)</div>
+          <div class="pc-item"><span class="pc-dot-green">✓</span> Want the app to drive progression, not just log it</div>
+          <div class="pc-item"><span class="pc-dot-green">✓</span> Care about data privacy</div>
+          <div class="pc-item"><span class="pc-dot-green">✓</span> Already use Apple Intelligence or are curious about it</div>
+          <div class="pc-item"><span class="pc-dot-green">✓</span> Are migrating from Strong (CSV import supported)</div>
+        </div>
+        <div class="pc-col">
+          <h4>Maybe look elsewhere if...</h4>
+          <div class="pc-item"><span class="pc-dot-amber">→</span> You primarily do calisthenics — the prediction engine works best with weighted lifts</div>
+          <div class="pc-item"><span class="pc-dot-amber">→</span> You want social/community features — Gymbell is focused on your own training</div>
+          <div class="pc-item"><span class="pc-dot-amber">→</span> You're on Android — it's iPhone only for now</div>
+        </div>
+      </div>
+
+      <h2>One honest caveat</h2>
+
+      <p>The predictive engine and Next Up feature don't fire on day one. They need data — a few weeks of consistent logging before the patterns become meaningful. If you try it for three sessions and don't see the magic, that's why. Give it a month. The app gets better the more it knows you.</p>
+
+      <h2>Pricing</h2>
+
+      <p>There's a one-month free trial with full access to every feature. After that, it's $2.99/month or $39.99 as a one-time lifetime purchase — no tiers, no features locked behind higher plans. Family Sharing is included either way.</p>
+
+      <div class="verdict-box">
+        <h3>Bottom line</h3>
+        <p>If you've been logging workouts for years without feeling like you're actually moving forward, the problem probably isn't your effort. It's that your app isn't helping you think. Gymbell is the first app I've used that genuinely feels like a training partner — one that gets sharper over time, keeps your data in your hands, and doesn't need you to figure out what to do next.</p>
+      </div>
+
+      <div class="cta-block">
+        <p>Try it free for a month. No account needed, your data stays in your own iCloud. And if you have feedback — genuine, honest feedback — the developer is one person who reads every message.</p>
+        <a class="cta-btn" href="https://apps.apple.com/fi/app/gymbell/id6769465638">Download Gymbell on the App Store</a>
+      </div>
+
+      <p class="footnote">Disclosure: this post was written by the developer of Gymbell. The comparisons are based on personal use of Strong and Hevy over several years of training.</p>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-logo">Gymbell</div>
+    <p class="footer-sub">Smart Workout Tracker for iPhone &amp; Apple Watch</p>
+    <nav class="footer-nav">
+      <a href="../index.html">Home</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+    </nav>
+  </footer>
+
+</body>
+</html>
