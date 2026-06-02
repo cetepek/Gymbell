@@ -1,0 +1,24 @@
+# Gymbell
+> AI-powered workout tracking for iPhone and Apple Watch
+
+Gymbell is a workout tracker with smart progressive overload coaching, body balance analysis, Apple Watch companion mode, and AI-generated training programs. Available on the App Store with a 1-month free trial.
+
+## Key Features
+- Smart NEXT UP: predicts which muscle group to train next based on your history
+- Progressive overload hints and in-session coach suggestions
+- Apple Watch companion mode with real-time set sync
+- Body balance tracking across 7 major muscle groups
+- AI-generated multi-week training programs (Claude, OpenAI, or Gemini)
+- Strength charts and estimated 1RM trend tracking
+- Local storage via SwiftData — no account, no cloud, no data harvesting
+
+## Pricing
+- Monthly: $2.99/month (after 1-month free trial)
+- Lifetime: $44.99 one-time purchase
+- Family Sharing included in both plans
+
+## Links
+- App Store: https://apps.apple.com/fi/app/gymbell/id6769465638
+- Support: gymbell2026@gmail.com
+- Privacy Policy: https://gymbell.fi/privacy.html
+- Terms of Service: https://gymbell.fi/terms.html
