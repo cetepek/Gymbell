@@ -1,0 +1,8 @@
+{
+  "schema_version": "1.0",
+  "name": "Gymbell",
+  "description": "AI-powered workout tracking app for iPhone and Apple Watch. Features progressive overload coaching, body balance analysis, Apple Watch companion mode, and AI-generated training programs.",
+  "capabilities": ["information", "contact"],
+  "contact": "gymbell2026@gmail.com",
+  "url": "https://gymbell.fi"
+}
