@@ -4,74 +4,159 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Blog — Gymbell</title>
-  <meta name="description" content="Training insights, app updates, and honest takes on strength tracking from the team behind Gymbell.">
+  <meta name="description" content="Training insights and honest takes on strength tracking from the developer behind Gymbell.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;650;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .blog-hero {
+      padding: 64px 0 48px;
+      border-bottom: 1px solid var(--line);
+    }
+    .blog-hero h1 {
+      font-family: var(--display);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+    .blog-hero p {
+      color: var(--text-dim);
+      font-size: 1rem;
+      max-width: 460px;
+    }
+    .blog-list {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+    .blog-card {
+      display: block;
+      padding: 32px 0;
+      border-bottom: 1px solid var(--line);
+      text-decoration: none;
+      color: inherit;
+    }
+    .blog-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .blog-tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .blog-date {
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+    .blog-card-title {
+      font-family: var(--display);
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 10px;
+      transition: color 0.15s;
+    }
+    .blog-card:hover .blog-card-title { color: var(--accent); }
+    .blog-card-excerpt {
+      font-size: 0.9375rem;
+      color: var(--text-dim);
+      line-height: 1.65;
+      margin-bottom: 14px;
+    }
+    .blog-read-more {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href="index.html">
-        <img src="assets/app-icon.png" alt="" width="64" height="64">
-        <span>Gymbell</span>
-      </a>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="blog.html">Blog</a>
-        <a href="guidance.html">Guidance</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="support.html">Support</a>
-      </div>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero blog-hero">
-      <div class="wrap">
-        <p class="eyebrow">Blog</p>
-        <h1 class="blog-h1">Training insights.<br>Honest takes.</h1>
-        <p class="lead">From the developer behind Gymbell — strength training, app design, and the space where they overlap.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <div class="blog-grid">
-
-          <a class="blog-card" href="blog/can-you-get-fit-using-only-a-gym-app.html">
-            <div class="blog-card-meta">
-              <span class="blog-tag">Opinion</span>
-              <span class="blog-date">June 2026</span>
-            </div>
-            <h2 class="blog-card-title">Can You Really Get Fit Using Only a Gym App?</h2>
-            <p class="blog-card-excerpt">I trained semi-consistently for years and barely progressed. Then I started tracking properly — and everything changed. An honest answer from someone who lifted the hard way first.</p>
-            <span class="blog-read-more">Read →</span>
-          </a>
-
-          <a class="blog-card" href="blog/best-gym-app-strength-training.html">
-            <div class="blog-card-meta">
-              <span class="blog-tag">Comparison</span>
-              <span class="blog-date">May 2026</span>
-            </div>
-            <h2 class="blog-card-title">What's the Best Gym App for Strength Training?</h2>
-            <p class="blog-card-excerpt">After 10 years of lifting and trying every tracker on the market, I built my own. Here's what I learned — and an honest comparison of Gymbell, Strong, and Hevy.</p>
-            <span class="blog-read-more">Read →</span>
-          </a>
-
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <span>© <span data-year></span> Gymbell</span>
-      <span><a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a> | <a href="support.html">Support</a></span>
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">G</span>
+      <span>Gymbell</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#watch">Apple Watch</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="blog.html">Blog</a>
     </div>
-  </footer>
-  <script src="app.js"></script>
+    <a class="nav-cta" href="https://apps.apple.com/fi/app/gymbell/id6769465638?l=fi">
+      Download
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</nav>
+
+<main>
+  <div class="blog-hero">
+    <div class="shell">
+      <h1>Blog</h1>
+      <p>Training insights and honest takes from the developer behind Gymbell.</p>
+    </div>
+  </div>
+
+  <div class="blog-list">
+    <a class="blog-card" href="blog/can-you-get-fit-using-only-a-gym-app.html">
+      <div class="blog-card-meta">
+        <span class="blog-tag">Opinion</span>
+        <span class="blog-date">June 2026</span>
+      </div>
+      <div class="blog-card-title">Can You Really Get Fit Using Only a Gym App?</div>
+      <p class="blog-card-excerpt">I trained semi-consistently for years and barely progressed. Then I started tracking properly — and everything changed. An honest answer from someone who lifted the hard way first.</p>
+      <span class="blog-read-more">Read →</span>
+    </a>
+
+    <a class="blog-card" href="blog/best-gym-app-strength-training.html">
+      <div class="blog-card-meta">
+        <span class="blog-tag">Comparison</span>
+        <span class="blog-date">May 2026</span>
+      </div>
+      <div class="blog-card-title">What's the Best Gym App for Strength Training?</div>
+      <p class="blog-card-excerpt">After 10 years of lifting and trying every tracker on the market, I built my own. An honest comparison of Gymbell, Strong, and Hevy — and the one thing most reviews get wrong.</p>
+      <span class="blog-read-more">Read →</span>
+    </a>
+  </div>
+</main>
+
+<footer>
+  <div class="foot-top">
+    <div class="foot-mark">Gymb<em>ell</em>.</div>
+    <div class="foot-tag">AI-coached strength<br>training for iPhone<br>&amp; Apple Watch</div>
+  </div>
+  <div class="foot-cols">
+    <div class="foot-col">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#watch">Apple Watch</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="https://apps.apple.com/fi/app/gymbell/id6769465638?l=fi">App Store</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Learn</h4>
+      <ul>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7bed3edf57634fddba3722ec72dca71d"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
