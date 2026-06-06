@@ -11,6 +11,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://gymbell.fi/blog/best-gym-app-strength-training.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymbell.fi/blog/can-you-get-fit-using-only-a-gym-app.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://gymbell.fi/privacy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
