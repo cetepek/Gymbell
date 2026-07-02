@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Why Your Gym App Shouldn't Need an Account — Gymbell Blog</title>
+  <meta name="description" content="Most workout apps demand an email before you log a single set. Here's why your fitness data belongs on your device, not someone else's server.">
+  <meta property="og:title" content="Why Your Gym App Shouldn't Need an Account">
+  <meta property="og:description" content="Most workout apps demand an email before you log a single set. Here's why your fitness data belongs on your device, not someone else's server.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://gymbell.fi/assets/IMG_8225.PNG">
+  <meta property="og:url" content="https://gymbell.fi/blog/gym-app-no-account.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Why Your Gym App Shouldn't Need an Account">
+  <meta name="twitter:description" content="Most workout apps demand an email before you log a single set. Here's why your fitness data belongs on your device, not someone else's server.">
+  <meta name="twitter:image" content="https://gymbell.fi/assets/IMG_8225.PNG">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .article-back {
+      display: inline-block;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 32px;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .article-back:hover { opacity: 0.7; }
+
+    .blog {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+      line-height: 1.75;
+      font-size: 16px;
+      font-family: var(--sans);
+      color: var(--text);
+    }
+
+    .blog-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .blog h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(26px, 5vw, 38px);
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0 0 1.25rem;
+      color: var(--text);
+    }
+
+    .blog h1 em {
+      font-style: italic;
+      color: var(--text-dim);
+    }
+
+    .blog-meta {
+      font-size: 13px;
+      color: var(--text-dim);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--line);
+      flex-wrap: wrap;
+    }
+
+    .blog-meta .author {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #1D9E75;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 600;
+      color: #04342C;
+      flex-shrink: 0;
+    }
+
+    .blog h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 22px;
+      font-weight: 700;
+      margin: 2.5rem 0 0.75rem;
+      color: var(--text);
+      line-height: 1.25;
+    }
+
+    .blog p {
+      margin: 0 0 1.25rem;
+      color: var(--text);
+    }
+
+    .pullquote {
+      border-left: 3px solid var(--accent);
+      padding: 0.75rem 1.25rem;
+      margin: 2rem 0;
+      background: var(--bg-3);
+      border-radius: 0 8px 8px 0;
+    }
+
+    .pullquote p {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 18px;
+      font-style: italic;
+      margin: 0;
+      color: var(--text);
+    }
+
+    .pullquote cite {
+      display: block;
+      font-style: normal;
+      font-size: 12px;
+      color: var(--text-dim);
+      margin-top: 0.5rem;
+    }
+
+    .verdict-box {
+      background: var(--bg-2);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+      border: 1px solid var(--line);
+    }
+
+    .verdict-box h3 {
+      margin: 0 0 0.5rem;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-dim);
+    }
+
+    .verdict-box p { margin: 0; font-size: 15px; }
+
+    .cta-block {
+      background: var(--bg-2);
+      border-radius: 14px;
+      padding: 1.5rem 2rem;
+      margin: 2.5rem 0 0;
+      text-align: center;
+      border: 1px solid var(--line);
+    }
+
+    .cta-block p {
+      margin: 0 0 1rem;
+      font-size: 15px;
+      color: var(--text-dim);
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--accent-ink);
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 24px;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+
+    .cta-btn:hover { opacity: 0.85; }
+
+    .footnote {
+      font-size: 12px;
+      color: var(--text-faint);
+      font-style: italic;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Why Your Gym App Shouldn't Need an Account",
+    "description": "Most workout apps demand an email before you log a single set. Here's why your fitness data belongs on your device, not someone else's server.",
+    "datePublished": "2026-06-28",
+    "dateModified": "2026-06-28",
+    "author": {
+      "@type": "Person",
+      "name": "Teemu Pekkanen",
+      "description": "Developer of Gymbell · 10 years lifting"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Gymbell",
+      "url": "https://gymbell.fi"
+    },
+    "url": "https://gymbell.fi/blog/gym-app-no-account.html",
+    "mainEntityOfPage": "https://gymbell.fi/blog/gym-app-no-account.html"
+  }
+  </script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">G</span>
+      <span>Gymbell</span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html#features">Features</a>
+      <a href="../index.html#watch">Apple Watch</a>
+      <a href="../index.html#pricing">Pricing</a>
+      <a href="../blog.html">Blog</a>
+    </div>
+    <a class="nav-cta" href="https://gymbell.fi/download">
+      Download
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</nav>
+
+<main>
+  <article class="blog">
+    <a class="article-back" href="../blog.html">← Blog</a>
+
+    <p class="blog-label">Privacy · Opinion</p>
+    <h1>Why Your Gym App<br><em>Shouldn't Need an Account</em></h1>
+
+    <div class="blog-meta">
+      <div class="author">
+        <div class="avatar">T</div>
+        <span>Written by the developer of Gymbell</span>
+      </div>
+      <span>·</span>
+      <span>June 2026</span>
+    </div>
+
+    <p>Before you can log a single set in most workout apps, you need to hand over your email address. Sometimes a phone number. Sometimes permission to connect your social accounts. Then comes the onboarding survey, the push notification prompt, and the "invite friends" screen.</p>
+
+    <p>All before you've touched a barbell.</p>
+
+    <p>I built Gymbell without any of that. No account required, no email, no sign-up flow. You download it, open it, and start logging. Your workout data lives on your device and backs up through your own iCloud, not through any server I run. I never see your data.</p>
+
+    <p>That was a deliberate choice, and it's worth explaining why.</p>
+
+    <h2>Your workout data is health data</h2>
+
+    <p>When you log a workout in an app, you're not just recording that you did some squats. You're building a detailed picture of your body: how strong you are, how often you train, when your performance drops, when you skip sessions. Over months, that data is genuinely revealing.</p>
+
+    <p>Most people don't think of workout logs as sensitive, the way they might think of medical records. But the line is blurry. A missed training block could indicate injury, illness, or a rough period of life. A sudden strength drop might correlate with sleep problems or stress. This is data worth protecting.</p>
+
+    <p>Once your workout history is on a company's server, you have no visibility into how it's stored, who can access it, or what happens to it if the company is acquired or goes under. The app might say "we don't sell your data" today. That policy can change.</p>
+
+    <h2>Why so many apps require accounts</h2>
+
+    <p>I want to be fair here: there are legitimate reasons for cloud accounts in some apps. If syncing across multiple devices is a core feature, an account makes sense. If the app has social features where you follow other people's workouts, accounts are necessary.</p>
+
+    <p>But a lot of the account requirement in fitness apps is not about you. It's about the company's growth model. An email address is a marketing channel. A cloud account lets the company analyze aggregate usage patterns. Social features make the app stickier and drive organic growth when users share their workouts.</p>
+
+    <div class="pullquote">
+      <p>"The social features in most gym apps exist to grow the app, not to improve your training."</p>
+      <cite>And if you're not using those features, you're still paying the price for them in complexity and data exposure</cite>
+    </div>
+
+    <p>None of that is inherently evil. But it's worth understanding what you're signing up for when you create an account in an app whose core purpose is helping you track your lifts.</p>
+
+    <h2>The practical benefits of no account</h2>
+
+    <p>Beyond the privacy angle, not requiring an account has real practical upsides that I didn't fully appreciate until I started using apps this way myself.</p>
+
+    <p>No credentials to manage. No "forgot password" flows when you switch phones. No worry about what happens to your data if you cancel your subscription. No targeted ads based on your fitness profile. No account to delete if you stop using the app.</p>
+
+    <p>It also means the app works exactly the same whether or not you have an internet connection. Your workout history is always there, always fast, because it's just a local database on your phone.</p>
+
+    <h2>How sync works without an account</h2>
+
+    <p>The obvious question: what about multiple devices? What if you want your workout history on your iPad, or you switch to a new iPhone?</p>
+
+    <p>Gymbell uses iCloud sync, which means your data moves between your Apple devices automatically through your existing Apple account. You already trust Apple with your photos, your messages, your health data. Your Gymbell data sits in that same ecosystem, with the same privacy guarantees.</p>
+
+    <p>Crucially, this is not Gymbell's cloud. I don't have access to your iCloud data. Apple does, under their privacy policy. For most people, that's a tradeoff they're already comfortable with.</p>
+
+    <p>If you don't want any cloud sync at all, you can turn off iCloud for Gymbell in your iPhone settings. Your data stays entirely local.</p>
+
+    <h2>What you give up</h2>
+
+    <p>Honest answer: community features. If you want to follow friends' workouts, join challenges with strangers, or post your PRs to a feed inside the app, Gymbell doesn't have that. That's not an oversight. It's a choice about what the app is for.</p>
+
+    <p>There's a version of social fitness that genuinely helps people stay accountable. I'm not dismissing it. But I think most people who want to track their training don't want their gym sessions entangled with a social network. They want a clean, fast, private log of their work.</p>
+
+    <p>If you're in the first camp, Gymbell probably isn't the right app. If you're in the second, you might find it's the only one that doesn't ask anything of you except to show up and lift.</p>
+
+    <div class="verdict-box">
+      <h3>The short version</h3>
+      <p>Most gym apps require accounts because accounts serve the company. A workout tracker that doesn't need your email, stores your data locally, and syncs through your own Apple account is a simpler, more private tool. That's the tradeoff Gymbell makes, and it's intentional.</p>
+    </div>
+
+    <div class="cta-block">
+      <p>Gymbell is a workout tracker for iPhone and Apple Watch. No account required, no social feed, no clutter. Just log your sets, track your progress, and let the app tell you when to push harder. First month free.</p>
+      <a class="cta-btn" href="https://gymbell.fi/download">Download Gymbell on the App Store</a>
+    </div>
+
+    <p class="footnote">Written by the developer of Gymbell. Gymbell uses SwiftData for local storage and iCloud for optional device sync. No data is transmitted to Gymbell servers.</p>
+  </article>
+</main>
+
+<footer>
+  <div class="foot-top">
+    <div class="foot-mark">Gymb<em>ell</em>.</div>
+    <div class="foot-tag">AI-coached strength<br>training for iPhone<br>&amp; Apple Watch</div>
+  </div>
+  <div class="foot-cols">
+    <div class="foot-col">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="../index.html#features">Features</a></li>
+        <li><a href="../index.html#watch">Apple Watch</a></li>
+        <li><a href="../index.html#pricing">Pricing</a></li>
+        <li><a href="https://gymbell.fi/download">App Store</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Learn</h4>
+      <ul>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../privacy.html">Privacy</a></li>
+        <li><a href="../terms.html">Terms</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7bed3edf57634fddba3722ec72dca71d"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
